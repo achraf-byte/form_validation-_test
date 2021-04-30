@@ -32,7 +32,7 @@ namef.addEventListener("input", function(e) {
         continputname.classList.add('error_input_box')
         continputname.classList.remove('succes')
         namemessage.classList.remove('suseccspan')
-
+        errorname = true
     }else{
         namemessage.innerHTML = 'ce nom est valide'
         namemessage.classList.remove('error')
@@ -51,6 +51,7 @@ email.addEventListener("input", function(e) {
         continputemail.classList.add('error_input_box')
         continputemail.classList.remove('succes')
         emailmessage.classList.remove('suseccspan')
+        erroremail = true
     }else{
         emailmessage.innerHTML = 'ce email est valide'
         emailmessage.classList.remove('error')
@@ -71,6 +72,7 @@ textpassword.value = e.target.value
         continputpassword.classList.add('error_input_box')
         continputpassword.classList.remove('succes')
         passwordmessage.classList.remove('suseccspan')
+        errorpassword = true
     }else{
         passwordmessage.innerHTML = 'bon mot de passe        '
         passwordmessage.classList.remove('error')
@@ -89,6 +91,7 @@ textpassword.addEventListener("input", function(e) {
       continputpassword.classList.add('error_input_box')
       continputpassword.classList.remove('succes')
       passwordmessage.classList.remove('suseccspan')
+      errorpassword = true
   }else{
       passwordmessage.innerHTML = 'bon mot de passe        '
       passwordmessage.classList.remove('error')
@@ -108,6 +111,7 @@ textreppassword.value = e.target.value
         continputreppw.classList.add('error_input_box')
         continputreppw.classList.remove('succes')
         reppasswordmessage.classList.remove('suseccspan')
+        errorpassword = true
     }else{
         reppasswordmessage.innerHTML = 'mot de passe confirmé'
         reppasswordmessage.classList.remove('error')
@@ -127,6 +131,7 @@ textreppassword.addEventListener("input", function(e) {
       continputreppw.classList.add('error_input_box')
       continputreppw.classList.remove('succes')
       reppasswordmessage.classList.remove('suseccspan')
+      errorpassword = true
   }else{
       reppasswordmessage.innerHTML = 'mot de passe confirmé'
       reppasswordmessage.classList.remove('error')
@@ -136,7 +141,6 @@ textreppassword.addEventListener("input", function(e) {
       errorpassword = false
   }
 });
-
 
 //changer le type d'input lorsque l'utilisateur clique sur l'icône
 seereppassword.addEventListener("click", function(e) {
@@ -181,6 +185,7 @@ textpassword.addEventListener("input", function(e) {
       continputpassword.classList.add('error_input_box')
       continputpassword.classList.remove('succes')
       passwordmessage.classList.remove('suseccspan')
+      errorpassword = true
   }else{
       passwordmessage.innerHTML = 'bon mot de passe        '
       passwordmessage.classList.remove('error')
@@ -199,6 +204,7 @@ textreppassword.addEventListener("input", function(e) {
       continputreppw.classList.add('error_input_box')
       continputreppw.classList.remove('succes')
       reppasswordmessage.classList.remove('suseccspan')
+      errorpassword = true
   }else{
       reppasswordmessage.innerHTML = 'mot de passe confirmé'
       reppasswordmessage.classList.remove('error')
@@ -211,10 +217,11 @@ textreppassword.addEventListener("input", function(e) {
 //soumettre les informations
 submit.addEventListener("click", function(e) {
 
-e.preventDefault();
-    if(errorpassword || erroremail || errorname || !condition.checked){
-        alert("L'information que vous avez entré est invalide");
-    }else{
-          alert("L'information que vous avez entré est valide");
-    }
-});
+    e.preventDefault();
+        if(errorpassword || erroremail || errorname || !condition.checked){
+            alert("L'information que vous avez entré est invalide");
+        }else{
+              alert("L'information que vous avez entré est valide");
+        }
+    });
+    
