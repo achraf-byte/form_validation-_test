@@ -136,16 +136,7 @@ textreppassword.addEventListener("input", function(e) {
       errorpassword = false
   }
 });
-//soumettre les informations
-submit.addEventListener("click", function(e) {
 
-e.preventDefault();
-    if(errorpassword || erroremail || errorname || !condition.checked){
-        alert("L'information que vous avez entré est invalide");
-    }else{
-          alert("L'information que vous avez entré est valide");
-    }
-});
 
 //changer le type d'input lorsque l'utilisateur clique sur l'icône
 seereppassword.addEventListener("click", function(e) {
@@ -216,4 +207,14 @@ textreppassword.addEventListener("input", function(e) {
       continputreppw.classList.add('succes')
       errorpassword = false
   }
+});
+//soumettre les informations
+submit.addEventListener("click", function(e) {
+
+e.preventDefault();
+    if(errorpassword || erroremail || errorname || !condition.checked){
+        alert("L'information que vous avez entré est invalide");
+    }else{
+          alert("L'information que vous avez entré est valide");
+    }
 });
