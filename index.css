@@ -2,7 +2,7 @@
     --error: #ffd7d770;
     --succes: #00cc5c;
     --maincolor: #ff5160;
-    --backgroud: red;
+    --backgroud: #FAFCFD;
     --black: #7f7f7f;
 }
 
@@ -186,4 +186,18 @@ body {
         width: 100% !important;
         min-width: 100% !important;
     }
+}
+@media screen and (max-width: 620px) {
+  .header i {
+      margin-top: -43px;
+  }
+  .submit {
+    padding: 8px;
+
+    margin: 20px 0px;
+}
+.contaciner {
+  
+    height: 90vh;
+}
 }
