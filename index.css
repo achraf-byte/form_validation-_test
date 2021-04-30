@@ -189,7 +189,7 @@ body {
 }
 @media screen and (max-width: 620px) {
   .header i {
-      margin-top: -43px;
+      margin-top: 0px;
   }
   .submit {
     padding: 8px;
