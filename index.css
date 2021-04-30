@@ -200,4 +200,7 @@ body {
     height: 90vh;
      overflow: scroll;
 }
+    .contaciner::-webkit-scrollbar {
+  display: none;
+}
 }
