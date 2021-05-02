@@ -22,6 +22,7 @@ var formatemail =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0
 var errorname = true
 var erroremail = true
 var errorpassword = true
+var errorreppassword = true
 
 // validation nome
 namef.addEventListener("input", function(e) {
@@ -111,14 +112,14 @@ textreppassword.value = e.target.value
         continputreppw.classList.add('error_input_box')
         continputreppw.classList.remove('succes')
         reppasswordmessage.classList.remove('suseccspan')
-        errorpassword = true
+        errorreppassword = true
     }else{
         reppasswordmessage.innerHTML = 'mot de passe confirmé'
         reppasswordmessage.classList.remove('error')
         reppasswordmessage.classList.add('suseccspan')
         continputreppw.classList.remove('error_input_box')
         continputreppw.classList.add('succes')
-        errorpassword = false
+        errorreppassword = false
     }
 });
 
@@ -131,14 +132,14 @@ textreppassword.addEventListener("input", function(e) {
       continputreppw.classList.add('error_input_box')
       continputreppw.classList.remove('succes')
       reppasswordmessage.classList.remove('suseccspan')
-      errorpassword = true
+      errorreppassword = true
   }else{
       reppasswordmessage.innerHTML = 'mot de passe confirmé'
       reppasswordmessage.classList.remove('error')
       reppasswordmessage.classList.add('suseccspan')
       continputreppw.classList.remove('error_input_box')
       continputreppw.classList.add('succes')
-      errorpassword = false
+      errorreppassword = false
   }
 });
 
@@ -204,21 +205,21 @@ textreppassword.addEventListener("input", function(e) {
       continputreppw.classList.add('error_input_box')
       continputreppw.classList.remove('succes')
       reppasswordmessage.classList.remove('suseccspan')
-      errorpassword = true
+      errorreppassword = true
   }else{
       reppasswordmessage.innerHTML = 'mot de passe confirmé'
       reppasswordmessage.classList.remove('error')
       reppasswordmessage.classList.add('suseccspan')
       continputreppw.classList.remove('error_input_box')
       continputreppw.classList.add('succes')
-      errorpassword = false
+      errorreppassword = false
   }
 });
 //soumettre les informations
 submit.addEventListener("click", function(e) {
 
     e.preventDefault();
-        if(errorpassword || erroremail || errorname || !condition.checked){
+        if(errorpassword || erroremail || errorreppassword || errorname || !condition.checked){
             alert("L'information que vous avez entré est invalide");
         }else{
               alert("L'information que vous avez entré est valide");
