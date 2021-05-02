@@ -45,7 +45,7 @@ namef.addEventListener("input", function(e) {
 });
 //validation email
 email.addEventListener("input", function(e) {
-    console.log( formatemail.test(e.target.value))
+    
     if(!formatemail.test(e.target.value)){
         emailmessage.innerHTML = 'ce email est invalide'
         emailmessage.classList.add('error')
